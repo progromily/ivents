@@ -1,0 +1,15 @@
+#------------- back django --------
+*.pyc 
+*~ 
+__pycache__ 
+/static 
+.DS_Store 
+.idea
+venv
+/venv
+/vevn
+vevn
+db.sqllite3
+src_back/db.sqlite3
+/api_service/photos
+migrations
