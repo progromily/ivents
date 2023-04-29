@@ -37,7 +37,7 @@ api:
 ```python
 {
     "id_system_team": 1, (id команды)
-    "eventId": 2 (id мероприятия)
+    "event": 2 (id мероприятия)
 }
 ```
 
@@ -60,7 +60,7 @@ api:
 ```python
 {
     "id_system_partner": 1, (id партнёра)
-    "eventId": 1 (id мероприятия)
+    "event": 1 (id мероприятия)
 }
 ```
 -------------------
