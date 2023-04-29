@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from ivents.models import Ivent, Team, RegionalPartner
+from events.models import Event, Team, RegionalPartner
 
 
 class TeamSerializer(serializers.ModelSerializer):
@@ -15,9 +15,9 @@ class RegionalPartnerSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class IventSerializer(serializers.ModelSerializer):
+class EventSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Ivent
+        model = Event
         fields = '__all__'
 
 

@@ -2,7 +2,7 @@ from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 
-class Ivent(models.Model):
+class Event(models.Model):
     """ событие """
     name = models.CharField(verbose_name="Название мероприятия", max_length=500)
     description = models.TextField(verbose_name="Описание мероприятия")
@@ -15,9 +15,9 @@ class Ivent(models.Model):
 
 class Team(models.Model):
     id_system_team = models.IntegerField()
-    ivent = models.ForeignKey('Ivent', on_delete=models.CASCADE)
+    event = models.ForeignKey('Event', on_delete=models.CASCADE)
 
 
 class RegionalPartner(models.Model):
     id_system_partner = models.IntegerField()
-    ivent = models.ForeignKey('Ivent', on_delete=models.CASCADE)
+    event = models.ForeignKey('Event', on_delete=models.CASCADE)

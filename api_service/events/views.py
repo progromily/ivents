@@ -1,19 +1,19 @@
 from rest_framework import generics
 
-from ivents.serializers import *
+from events.serializers import *
 
 
 # работа с мероприятием
 
 
-class IventsView(generics.ListCreateAPIView):
-    serializer_class = IventSerializer
-    queryset = Ivent.objects.all()
+class EventsView(generics.ListCreateAPIView):
+    serializer_class = EventSerializer
+    queryset = Event.objects.all()
 
 
-class ListIventsViewOfTeam(generics.ListAPIView):
+class ListEventsViewOfTeam(generics.ListAPIView):
     """ вывод всех мероприятий, в которых команда участвует """
-    serializer_class = IventSerializer
+    serializer_class = EventSerializer
     lookup_field = 'pk'
 
     def get_queryset(self):
@@ -21,7 +21,7 @@ class ListIventsViewOfTeam(generics.ListAPIView):
         teams = Team.objects.filter(id_system_team=team_pk)
         ivents = []
         for t in teams:
-            ivents.append(Ivent.objects.get(pk=t.ivent_id))
+            ivents.append(Event.objects.get(pk=t.ivent_id))
         return ivents
 
 
