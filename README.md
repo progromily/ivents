@@ -30,10 +30,12 @@ api:
 
     api/events/team/
 	(POST) добавление команд в мероприятие
+```python
 {
     "id_system_team": 1, (id команды)
     "eventId": 2 (id мероприятия)
 }
+```
 
 -------------------
 
@@ -47,12 +49,12 @@ api:
 
     api/events/regionalpartner/
 	(POST) добавление региональных партнёров в мероприятие
-
+```python
 {
     "id_system_partner": 1, (id партнёра)
     "eventId": 1 (id мероприятия)
 }
-
+```
 -------------------
 
     api/events/regionalpartners/<int:pk>/
